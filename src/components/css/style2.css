@@ -1,0 +1,65 @@
+/*---ETIQUETAS---*/
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    font-family: "Open Sans Condensed";
+    color: #a11600;
+}
+
+h3 {
+    font-size: 150%;
+    text-decoration: none;
+}
+
+header {
+    font-weight: lighter;
+    display: flex;
+    flex-direction: row;
+    background-color: #a11600;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 1%;
+}
+
+header img {
+    width: 10%;
+    padding-left: 3%;
+    margin-right: 7%;
+    padding-right: 3%;
+    padding-top: 1%;
+    margin: 0;
+}
+
+header h1 {
+    font-weight: lighter;
+    position: absolute;
+    display: inline;
+    font-size: 115%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    color: black;
+}
+
+header ul {
+    float:right;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5%;
+    margin-right: 7%;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header ul li p {
+    color: black;
+    margin-top: 200%;
+    margin-bottom: 0%;
+}
+
