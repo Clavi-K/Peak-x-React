@@ -1,5 +1,6 @@
-import '../css/style2.css';
-import logo from '../img/logo.png';
+import './css/style2.css';
+import logo from './img/logo.png';
+import Cart from './Cart.js';
 
 function Navbar() {
     return (
@@ -30,6 +31,8 @@ function Navbar() {
                     <a id="item" className="nav-link menu" href="*">Contact</a>
                 </li>
             </ul>
+
+            <Cart />
 
         </header>
 

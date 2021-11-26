@@ -63,3 +63,23 @@ header ul li p {
     margin-bottom: 0%;
 }
 
+header button img {
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+
+header button {
+    position: absolute;
+    display: inline;
+    background: none;
+    border: none;
+    width: 3%;
+    right: 2%;
+    top: 25%;
+}
+
+/* --- CLASES --- */
+
+
+

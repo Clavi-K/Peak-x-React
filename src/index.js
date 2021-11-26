@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './components/css/style2.css';
-// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/Navbar/Navbar.js'
+import Navbar from './components/Navbar.js';
 
 ReactDOM.render(
   <React.StrictMode >
