@@ -4,6 +4,7 @@ import './components/css/style2.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './components/Navbar.js';
+import Landing from './components/Landing.js'
 
 ReactDOM.render(
   <React.StrictMode >
@@ -24,6 +25,7 @@ ReactDOM.render(
     />
 
     <Navbar />
+    <Landing greeting='Greetings, stranger.' />
 
   </React.StrictMode>,
   document.getElementById('root')

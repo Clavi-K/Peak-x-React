@@ -81,5 +81,9 @@ header button {
 
 /* --- CLASES --- */
 
-
+.landing {
+    color: #a11600;
+    background-color: black;
+    width: 100vw;
+}
 
