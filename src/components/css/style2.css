@@ -2,12 +2,16 @@
 
 * {
     margin: 0;
+    padding: 0;
+    font-family: "Open Sans Condensed";
+    color: #a11600;
 }
 
 body {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
     background-color: black;
-    font-family: "Open Sans Condensed";
-    color: #a11600;
 }
 
 h3 {
@@ -20,9 +24,8 @@ header {
     display: flex;
     flex-direction: row;
     background-color: #a11600;
-    position: absolute;
     width: 100%;
-    padding-bottom: 1%;
+    height: 12vh;
 }
 
 header img {
@@ -59,7 +62,7 @@ header ul li a {
 
 header ul li p {
     color: black;
-    margin-top: 200%;
+    margin-top: 120%;
     margin-bottom: 0%;
 }
 
@@ -74,16 +77,20 @@ header button {
     display: inline;
     background: none;
     border: none;
-    width: 3%;
-    right: 2%;
-    top: 25%;
+    width: 2%;
+    right: 4%;
+    top: 3.2%;
+}
+
+section h1 {
+    top: 70%;
 }
 
 /* --- CLASES --- */
 
 .landing {
-    color: #a11600;
+    position: absolute;
     background-color: black;
     width: 100vw;
+    height: 88vh;
 }
-
