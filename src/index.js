@@ -24,8 +24,7 @@ ReactDOM.render(
       rel="stylesheet"
     />
 
-    <Navbar />
-    <Landing greeting='Greetings, stranger.' />
+    <App />
 
   </React.StrictMode>,
   document.getElementById('root')
