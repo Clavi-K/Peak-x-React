@@ -1,5 +1,5 @@
-import './css/style2.css';
-import cart from './img/cart.png';
+import '../css/style2.css';
+import cart from '../img/cart.png';
 
 function Cart() {
 

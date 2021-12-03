@@ -1,5 +1,5 @@
-import './css/style2.css';
-import logo from './img/logo.png';
+import '../css/style2.css';
+import logo from '../img/logo.png';
 import Cart from './Cart.js';
 
 function Navbar() {

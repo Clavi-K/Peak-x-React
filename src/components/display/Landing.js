@@ -1,6 +1,7 @@
 import React from 'react';
-import './css/style2.css';
+import '../css/style2.css';
 import ItemCounter from './ItemCounter';
+import ItemList from './ItemList';
 
 
 function Landing(props) {
@@ -8,7 +9,7 @@ function Landing(props) {
         <section className="landing" id="title">
             <h1>{props.greeting}</h1>
 
-            <ItemCounter name='Black Airforce' stock='14' /> 
+            <ItemList />
         </section>
     )
 }

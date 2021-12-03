@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
-import Landing from './components/Landing';
-import ItemCounter from'./components/ItemCounter';
+import Navbar from './components/display/Navbar';
+import Landing from './components/display/Landing';
+import ItemList from './components/display/ItemList';
 
 function App() {
   return (
@@ -25,7 +24,8 @@ function App() {
 
     <>
       <Navbar />
-      <Landing greeting='Greetings, stranger.' />
+      <Landing greeting='PEAK STREETWEAR' />
+      <ItemList />
     </>
   );
 }

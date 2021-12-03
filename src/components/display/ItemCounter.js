@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react';
-import './css/style2.css';
+import React, { useState } from 'react';
+import '../css/style2.css';
 
 function ItemCounter(props) {
 
@@ -7,7 +7,7 @@ function ItemCounter(props) {
     let name = props.name;
 
     const [counter, setCounter] = useState(0);
-    const [sCounter, setSCounter] = useState(14);
+    const [sCounter, setSCounter] = useState(props.stock);
 
     function plusItem() {
         if (counter < stock) {

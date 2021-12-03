@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import './components/css/style2.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/Navbar.js';
-import Landing from './components/Landing.js'
 
 ReactDOM.render(
   <React.StrictMode >

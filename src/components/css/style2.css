@@ -88,6 +88,17 @@ section h1 {
 
 /* --- CLASES --- */
 
+.ItemList {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.Item {
+    border-style: solid;
+    border-color: #a11600;
+}
+
 .landing {
     position: absolute;
     background-color: black;
@@ -105,8 +116,6 @@ section h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border-style: solid;
-    border-color: #a11600;
 }
 
 .cDisplay {
@@ -129,7 +138,10 @@ section h1 {
     background: none;
     border-color: #a11600;
     text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
+
 
 /* --- IDs --- */
 
