@@ -41,7 +41,7 @@ function ItemCounter(props) {
                 <button className="cButtons" onClick={plusItem}>+</button>
             </div>
 
-            <button className="addToCartButton">Add to Cart</button>
+            <button className="addToCartButton">Details</button>
 
         </div>
     )

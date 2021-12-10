@@ -3,7 +3,7 @@ import ArraySet from '../utilities/ArraySet';
 import { useState, useEffect } from 'react';
 import Item from './Item';
 
-function ItemList() {
+export default function ItemList() {
 
     const [items, setItems] = useState([]);
 
@@ -11,16 +11,10 @@ function ItemList() {
         ArraySet
             .then(response => setItems(response));
     }, []);
-
-    for (const i of items) {
-        console.log(i.amount);
-    }
-
+ 
     return (<ul className="ItemList">
 
-        {items.map(item => <Item Item={item} />)}
+        {items.map(item => <Item Item={item} key={item.id} />)}
 
     </ul>)
 }
-
-export default ItemList;

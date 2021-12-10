@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/display/Navbar';
 import Landing from './components/display/Landing';
 import ItemList from './components/display/ItemList';
+import ItemDetails from './components/display/ItemDetails';
 
 function App() {
   return (

@@ -1,15 +1,15 @@
 import React from 'react';
 import '../css/style2.css';
-import ItemCounter from './ItemCounter';
 
-function Item({Item}) {
-    return(
+export default function Item({ Item }) {
+
+    return (
         <li className="Item">
-            <img src=".../data/img/items/shoes/shoes0.jpg"></img>
-            <ItemCounter name={Item.name} stock={Item.amount} />
+            <img src={Item.img} className="ItemImg"></img>
+            <h2>{Item.name}</h2>
+            <button className="itemButton">Ver detalles</button>
         </li>
     )
 
 }
 
-export default Item;
