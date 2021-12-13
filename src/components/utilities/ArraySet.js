@@ -1,11 +1,14 @@
-const prom = new Promise((resolve) =>{
+const prom = new Promise((resolve) => {
 
-    setTimeout(() =>{
+    setTimeout(() => {
 
-        const prods = require('../data/Shoes.json');
+        const prods = require('../data/Products.json');
+
         resolve(prods);
 
     }, 2000);
+
+
 
 });
 

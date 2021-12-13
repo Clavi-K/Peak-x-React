@@ -29,21 +29,20 @@ header {
 }
 
 header img {
+    position: absolute;
     width: 10%;
     padding-left: 3%;
     margin-right: 7%;
-    padding-right: 3%;
+    padding-right: 2.6%;
     padding-top: 1%;
     margin: 0;
+    right: 91%;
+    bottom: 90%;
 }
 
 header h1 {
-    font-weight: lighter;
-    position: absolute;
-    display: inline;
+    font-weight: normal;
     font-size: 115%;
-    margin-top: 2%;
-    margin-bottom: 0%;
     color: black;
 }
 
@@ -108,7 +107,7 @@ section h1 {
     position: absolute;
     background-color: black;
     width: 100vw;
-    height: 88vh;
+    height: 100vh;
     display: flex;
 }
 
@@ -160,10 +159,67 @@ section h1 {
     padding-right: 10%;
 }
 
+.Categories {
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Categories img {
+    width: 85%;
+}
+
+.Category {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Category h2 {
+    width: 85%;
+}
+
+.sCart {
+    left: 95.5%;
+    top: 3.5%;
+    width: 2%;
+}
+
+.navBar {
+    position: absolute;
+    font-size: 110%;
+    bottom: 91%;
+    right: 0%;
+}
+
+.NavTitle {
+    position: absolute;
+    top: 3.6%;
+    left: 8%;
+}
+
+.DetailImg{
+    width: 100%;
+    height: 100vh;
+}
+
 
 /* --- IDs --- */
 
 #title {
     display: block;
     text-align: center;
+}
+
+/* --- TRANSICIONES --- */ 
+
+
+.caTitle {
+    transition: all 0.2s;
+}
+
+.caTitle:hover {
+    background-color: #a11600;
+    color: black;
+    text-decoration: none;
 }

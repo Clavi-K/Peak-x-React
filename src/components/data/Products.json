@@ -1,0 +1,74 @@
+[
+    {
+        "id": 0,
+        "name": "Nike Airforce 1 High 07 negras",
+        "price": 100,
+        "amount": 14,
+        "cat": "shoes",
+        "img": "img/items/shoes/shoes0.jpg",
+        "desc": "Talles disponiles: 41, 42, 43, 44"
+    },
+    {
+        "id": 1,
+        "name": "Jordan 1 blancas y negras",
+        "price": 250,
+        "amount": 26,
+        "cat": "shoes",
+        "img": "img/items/shoes/shoes1.jpg",
+        "desc": "Talles disponiles: 41, 42, 43, 44"
+    },
+    {
+        "id": 2,
+        "name": "Urban light marrones",
+        "price": 25,
+        "amount": 56,
+        "cat": "shoes",
+        "img": "img/items/shoes/shoes2.jpg",
+        "desc": "Talles disponiles: 41, 42, 43, 44"
+    },
+    {
+        "id": 3,
+        "name": "Addidas Pro Play blancas y negras",
+        "price": 60,
+        "amount": 26,
+        "cat": "shoes",
+        "img": "img/items/shoes/shoes3.jpg",
+        "desc": "Talles disponiles: 41, 42, 43, 44"
+    },
+    {
+        "id": 4,
+        "name": "Buzo con capucha Nike negro",
+        "price": 40,
+        "amount": 14,
+        "cat": "hoodies",
+        "img": "img/items/hoodies/hoodies0.jpg",
+        "desc": "Talles disponiles: S, M, L, XL, XXL"
+    },
+    {
+        "id": 5,
+        "name": "Buzo sin capucha Nike negro",
+        "price": 30,
+        "amount": 26,
+        "cat": "hoodies",
+        "img": "img/items/hoodies/hoodies1.jpg",
+        "desc": "Talles disponiles: S, M, L, XL, XXL"
+    },
+    {
+        "id": 6,
+        "name": "Buzo Cyberpunk Tokyo",
+        "price": 35,
+        "amount": 56,
+        "cat": "hoodies",
+        "img": "img/items/hoodies/hoodies2.jpg",
+        "desc": "Talles disponiles: S, M, L, XL, XXL"
+    },
+    {
+        "id": 7,
+        "name": "Buzo Cyberpunk Vertex verde",
+        "price": 40,
+        "amount": 26,
+        "cat": "hoodies",
+        "img": "img/items/hoodies/hoodies3.jpg",
+        "desc": "Talles disponiles: S, M, L, XL, XXL"
+    }
+]

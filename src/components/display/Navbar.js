@@ -1,6 +1,7 @@
 import '../css/style2.css';
 import logo from '../img/logo.png';
 import Cart from './Cart.js';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
@@ -8,12 +9,14 @@ function Navbar() {
         <header>
 
             <img src={logo} alt="peak streetwear logo"></img>
-            <h1>PEAK STREETWEAR</h1>
+            <h1 className="NavTitle">PEAK STREETWEAR</h1>
 
-            <ul className="nav" id="menu">
+            <ul className="nav navBar" id="menu">
+                <Link to={`/`}>
                 <li className="nav-item">
-                    <a id="item" className="nav-link menu" ariaCurrent="page" href="*">Home</a>
+                    <a id="item" className="nav-link menu" ariaCurrent="page" href="/">Home</a>
                 </li>
+                </Link>
 
                 <li>
                     <p>|</p>

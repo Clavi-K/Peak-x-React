@@ -2,21 +2,37 @@ import '../css/style2.css';
 import ArraySet from '../utilities/ArraySet';
 import { useState, useEffect } from 'react';
 import Details from './Details';
+import { useParams } from 'react-router-dom';
 
-export default function ItemDetails(props) {
+export default function ItemDetails() {
 
-    let intId = parseInt(props.id);
-
-    const [items, setItems] = useState([]);
+    const { id } = useParams();
+    const [Item, setItem] = useState([]);
 
     useEffect(() => {
         ArraySet
-            .then(response => response[intId])
-            .then(data => setItems(data));
-    }, []);
+            .then(response => setItem(itemReturner(response, id)));
+    }, [id]);
 
-    console.log(items.name);
+    console.log(Item.name);
 
-    return ( <Details item={items} /> );
+    return (<img src={Item.img}></img>);
 
+    function itemReturner(response, id) {
+
+        let value;
+
+        for (const i of response) {
+
+            if (i.id == id) {
+
+                value = i;
+
+            }
+
+        }
+
+        return value;
+
+    }
 }

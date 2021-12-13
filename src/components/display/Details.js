@@ -2,13 +2,13 @@ import React from 'react';
 import '../css/style2.css';
 import ItemCounter from './ItemCounter';
 
-export default function Details({item}) {
+export default function Details({Item}) {
 
     return(
         <div className="details">
-            <img src={item.img}></img>
-            <ItemCounter name={item.name} stock={item.amount} />
-            <p className="description">{item.desc}</p>
+            <img src={Item.img}></img>
+            <ItemCounter name={Item.name} stock={Item.amount} />
+            <p className="description">{Item.desc}</p>
         </div>
     )
 

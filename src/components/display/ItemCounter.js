@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../css/style2.css';
 
 function ItemCounter(props) {
-
     let stock = parseInt(props.stock);
     let name = props.name;
 
@@ -33,7 +32,7 @@ function ItemCounter(props) {
         <div className="itemCounter">
 
             <h3>{name}</h3>
-            <p>Stock: {sCounter}</p>
+            <p>Stock: {props.stock}</p>
 
             <div className="cDisplay">
                 <button className="cButtons" onClick={minusItem}>-</button>
