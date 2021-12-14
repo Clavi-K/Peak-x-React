@@ -9,21 +9,21 @@ export default function Categories() {
 
             <Link to={`/snaps`}>
                 <div className='Category'>
-                    <img src="img/categories/snap.jpg"></img>
+                    <img src={"img/categories/snap.jpg"}></img>
                     <h2 className='caTitle'><a>Snapbacks</a></h2>
                 </div>
             </Link>
 
             <Link to={`/shoes`}>
                 <div className='Category'>
-                    <img src="img/categories/shoe.jpg"></img>
+                    <img src={"img/categories/shoe.jpg"}></img>
                     <h2 className='caTitle'><a>Shoes</a></h2>
                 </div>
             </Link>
 
             <Link to={`/hoodies`}>
                 <div className='Category'>
-                    <img src="img/categories/hoodie.jpg"></img>
+                    <img src={"img/categories/hoodie.jpg"}></img>
                     <h2 className='caTitle'><a>Hoodies</a></h2>
                 </div>
             </Link>

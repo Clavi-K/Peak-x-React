@@ -3,8 +3,8 @@ import '../css/style2.css';
 import Categories from './Categories';
 import ItemList from './ItemList';
 import Navbar from './Navbar';
+import Details from './Details';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ItemDetails from './ItemDetails';
 
 export default function Landing(props) {
 
@@ -23,7 +23,7 @@ export default function Landing(props) {
                     <Route exact path="/" element={<Categories />} />
                     <Route exact path="/shoes" element={<ItemList  cat="shoes"/>} />
                     <Route exact path="/hoodies" element={<ItemList  cat="hoodies"/>} />
-                    <Route exact path="/details/:id" element={<ItemDetails />} />
+                    <Route exact path="/Test/:id" element={<Details />} />
                 </Routes>
 
             </BrowserRouter>

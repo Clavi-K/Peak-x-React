@@ -6,13 +6,12 @@ function ItemCounter(props) {
     let name = props.name;
 
     const [counter, setCounter] = useState(0);
-    const [sCounter, setSCounter] = useState(props.stock);
+    const [sCounter, setSCounter] = useState(stock);
 
     function plusItem() {
         if (counter < stock) {
-
-            setCounter(counter+1);
-            setSCounter(sCounter-1);
+            setCounter(counter + 1);
+            setSCounter(sCounter - 1);
 
         }
     }
@@ -21,18 +20,18 @@ function ItemCounter(props) {
 
         if (counter > 0) {
 
-            setCounter(counter-1);
-            setSCounter(sCounter+1);
+            setCounter(counter - 1);
+            setSCounter(sCounter + 1);
 
         }
-        
+
     }
 
     return (
         <div className="itemCounter">
 
             <h3>{name}</h3>
-            <p>Stock: {props.stock}</p>
+            <p>Stock: {stock - counter}</p>
 
             <div className="cDisplay">
                 <button className="cButtons" onClick={minusItem}>-</button>

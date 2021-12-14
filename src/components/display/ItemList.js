@@ -2,8 +2,13 @@ import '../css/style2.css';
 import ArraySet from '../utilities/ArraySet';
 import { useState, useEffect } from 'react';
 import Item from './Item';
+import { useParams } from 'react-router-dom';
 
 export default function ItemList(props) {
+
+    const { id } = useParams();
+
+    console.log(typeof (id));
 
     const [items, setItems] = useState([]);
     let arr = [];
@@ -23,9 +28,9 @@ export default function ItemList(props) {
 
     return (<ul className="ItemList">
 
-        {arr.map(item => <Item Item={item} key={item.id} />)}
+        {arr.map(item => <Item Item={item} key={item.id}></Item>)}
 
-    </ul>)
+    </ul>);
 }
 
 function shoesFilter(item) {
@@ -39,3 +44,4 @@ function snapsFilter(item) {
 function hoodiesFilter(item) {
     return (item.cat === "hoodies");
 }
+
