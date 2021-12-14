@@ -112,9 +112,10 @@ section h1 {
 }
 
 .itemCounter {
+    position: absolute;
     color: #a11600;
-    margin-left: 1%;
-    width: 13vw;
+    left: 30%;
+    width: 30vw;
     height: 35vh;
     text-align: center;
     display: flex;
@@ -122,20 +123,38 @@ section h1 {
     justify-content: space-evenly;
 }
 
+.itemCounter h3 {
+    top: 5%;
+    font-size: 250%;
+    display: block;
+    position: absolute;
+}
+
+.itemCounter p {
+    position: absolute;
+    top: 30% !important;
+    left: 45% !important;
+}
+
 .cDisplay {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 20%;
+}
 
+.cDisplay p {
+    top: 47% !important;
+    left: 49.5% !important;
 }
 
 .cButtons {
     background: none;
     border-color: #a11600;
-    height: 50%;
-    width: 20%;
+    height: 10%;
+    width: 15%;
     text-align: center;
-    padding-bottom: 13%;
+    padding-bottom: 8%;
 }
 
 .addToCartButton {
@@ -198,9 +217,23 @@ section h1 {
     left: 8%;
 }
 
-.DetailImg{
-    width: 100%;
-    height: 100vh;
+.details img {
+    position: absolute;
+    width: 25%;
+    left: 2%
+}
+
+.details h4 {
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    text-decoration: underline;
+}
+
+.details p {
+    position: absolute;
+    top: 86%;
+    left: 3%;
 }
 
 

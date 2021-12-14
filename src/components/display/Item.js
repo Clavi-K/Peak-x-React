@@ -10,7 +10,7 @@ export default function Item({ Item }) {
         <li className="Item">
             <img src={Item.img} className="ItemImg"></img>
             <h2>{Item.name}</h2>
-            <Link to={`/Test/${Item.id}`}><button className="itemButton">Ver detalles</button></Link>
+            <Link to={`/details/${Item.id}`}><button className="itemButton">Ver detalles</button></Link>
         </li>
     )
 

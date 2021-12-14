@@ -23,7 +23,7 @@ export default function Landing(props) {
                     <Route exact path="/" element={<Categories />} />
                     <Route exact path="/shoes" element={<ItemList  cat="shoes"/>} />
                     <Route exact path="/hoodies" element={<ItemList  cat="hoodies"/>} />
-                    <Route exact path="/Test/:id" element={<Details />} />
+                    <Route exact path="/details/:id" element={<Details />} />
                 </Routes>
 
             </BrowserRouter>

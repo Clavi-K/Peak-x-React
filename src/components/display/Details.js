@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ItemCounter from './ItemCounter';
 
-export default function Test() {
+export default function Details() {
     
     const { id } = useParams();
     let ID = parseInt(id);
@@ -17,10 +17,11 @@ export default function Test() {
     }, []);
 
     return (
-        <section className="">
-            <img src={"../../../" + Item.img} className="ItemImg"></img>
-            <p>{Item.desc}</p>
+        <section className="details">
+            <img src={"../../../" + Item.img} className=""></img>
             <ItemCounter name={Item.name} stock={Item.amount} />
+            <h4>Descripción</h4>
+            <p>{Item.desc}</p>
         </section>
     )
 
