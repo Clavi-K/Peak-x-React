@@ -19,7 +19,7 @@ export default function Details() {
     return (
         <section className="details">
             <img src={"../../../" + Item.img} className=""></img>
-            <ItemCounter name={Item.name} stock={Item.amount} />
+            <ItemCounter name={Item.name} stock={Item.amount} id={Item.id} price={Item.price} />
             <h4>Descripción</h4>
             <p>{Item.desc}</p>
         </section>

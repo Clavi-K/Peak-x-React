@@ -115,7 +115,7 @@ section h1 {
     position: absolute;
     color: #a11600;
     left: 30%;
-    width: 30vw;
+    width: 55vw;
     height: 35vh;
     text-align: center;
     display: flex;
@@ -128,33 +128,34 @@ section h1 {
     font-size: 250%;
     display: block;
     position: absolute;
+    left: 8%;
 }
 
-.itemCounter p {
+.cprice {
     position: absolute;
-    top: 30% !important;
-    left: 45% !important;
+    margin-top: 10%;
 }
 
 .cDisplay {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 20%;
+    margin-top: 45%;
+    margin-right: 50%;
 }
 
 .cDisplay p {
-    top: 47% !important;
-    left: 49.5% !important;
+    top: 106% !important;
+    left: 25% !important;
 }
 
 .cButtons {
     background: none;
     border-color: #a11600;
-    height: 10%;
-    width: 15%;
+    height: 0%;
+    width: 10%;
     text-align: center;
-    padding-bottom: 8%;
+    padding-bottom: 5%;
 }
 
 .addToCartButton {
@@ -162,7 +163,8 @@ section h1 {
     border-color: #a11600;
     text-align: center;
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 53%;
+    width: 39%;
 }
 
 .ItemImg {
@@ -242,6 +244,11 @@ section h1 {
 #title {
     display: block;
     text-align: center;
+}
+
+#cstock {
+    top: 95%;
+    left: 22.4%;
 }
 
 /* --- TRANSICIONES --- */ 

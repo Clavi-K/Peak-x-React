@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
 import '../css/style2.css';
+import { NavLink } from 'react-router-dom';
 
-function ItemCounter(props) {
+export default function ItemCounter(props) {
     let stock = parseInt(props.stock);
     let name = props.name;
+    let price = props.price;
+    let button;
 
     const [counter, setCounter] = useState(0);
     const [sCounter, setSCounter] = useState(stock);
+
+    if (props.id != undefined) {
+
+        if (counter == 0) {
+            button = <NavLink to={`/details/${props.id}`}><button className="addToCartButton">Añadir al carrito</button></NavLink>;
+        }
+
+        button = <NavLink to={`/cart/${props.id}/${counter}`}><button className="addToCartButton">Añadir al carrito</button></NavLink>;
+
+    }
 
     function plusItem() {
         if (counter < stock) {
@@ -31,7 +44,8 @@ function ItemCounter(props) {
         <div className="itemCounter">
 
             <h3>{name}</h3>
-            <p>Stock: {stock - counter}</p>
+            <h3 className="cprice">Precio: ${price}</h3>
+            <p id="cstock">Stock: {stock - counter}</p>
 
             <div className="cDisplay">
                 <button className="cButtons" onClick={minusItem}>-</button>
@@ -39,11 +53,9 @@ function ItemCounter(props) {
                 <button className="cButtons" onClick={plusItem}>+</button>
             </div>
 
-            <button className="addToCartButton">Añadir al carrito</button>
+            {button}
 
         </div>
     )
 
 }
-
-export default ItemCounter;
