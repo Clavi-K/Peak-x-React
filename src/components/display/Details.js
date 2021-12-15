@@ -10,6 +10,7 @@ export default function Details() {
     const { id } = useParams();
     let ID = parseInt(id);
     const [Item, setItem] = useState([]);
+    let itemCounter;
 
     useEffect(() => {
         ArraySet
@@ -19,7 +20,7 @@ export default function Details() {
     return (
         <section className="details">
             <img src={"../../../" + Item.img} className=""></img>
-            <ItemCounter name={Item.name} stock={Item.amount} id={Item.id} price={Item.price} />
+            {Item.sizes ? <ItemCounter Item={Item} key={Item.id}/> : null}
             <h4>Descripción</h4>
             <p>{Item.desc}</p>
         </section>
@@ -33,7 +34,7 @@ function itemReturner(response, id) {
 
     for(const i of response) {
 
-        if(i.id == id) {
+        if(i.id === id) {
 
             value = i;
 

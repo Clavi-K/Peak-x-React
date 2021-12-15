@@ -2,24 +2,27 @@ import React, { useState } from 'react';
 import '../css/style2.css';
 import { NavLink } from 'react-router-dom';
 
-export default function ItemCounter(props) {
-    let stock = parseInt(props.stock);
-    let name = props.name;
-    let price = props.price;
-    let button;
+function Finishp({ Item, counter, option }) {
+
+    console.log(option)
+
+    return <NavLink to={`/cart/${Item.id}/${counter}/${option}`}><button className="addToCartButton">Finalizar compra</button></NavLink>;
+
+}
+
+function Addp({ handler, counter }) {
+    return <button className="addToCartButton" onClick={handler}>Añadir al carrito</button>;
+}
+
+export default function ItemCounter({ Item }) {
+    let stock = parseInt(Item.amount);
+    let name = Item.name;
+    let price = Item.price;
 
     const [counter, setCounter] = useState(0);
     const [sCounter, setSCounter] = useState(stock);
-
-    if (props.id != undefined) {
-
-        if (counter == 0) {
-            button = <NavLink to={`/details/${props.id}`}><button className="addToCartButton">Añadir al carrito</button></NavLink>;
-        }
-
-        button = <NavLink to={`/cart/${props.id}/${counter}`}><button className="addToCartButton">Añadir al carrito</button></NavLink>;
-
-    }
+    const [sizeS, setSize] = useState(Item.sizes[0]);
+    const [input, setInput] = useState('button');
 
     function plusItem() {
         if (counter < stock) {
@@ -40,11 +43,23 @@ export default function ItemCounter(props) {
 
     }
 
+    function handler() {
+        if(counter != 0){
+            setInput('input');
+        }
+    }
+
+    function sizeHandler(e) {
+        console.log(typeof(e.target.value))
+        setSize(e.target.value);
+    }
+
     return (
         <div className="itemCounter">
 
             <h3>{name}</h3>
             <h3 className="cprice">Precio: ${price}</h3>
+
             <p id="cstock">Stock: {stock - counter}</p>
 
             <div className="cDisplay">
@@ -53,7 +68,26 @@ export default function ItemCounter(props) {
                 <button className="cButtons" onClick={plusItem}>+</button>
             </div>
 
-            {button}
+            <div className="selectDiv">
+
+                <span className="selectText">Talle:</span>
+
+                <select className="itemSelect" defaultValue={Item.sizes[0].toString()} onChange={sizeHandler}>
+                    {Item.sizes.map(size => <option className="selectOption" value={size}>{size}</option>)}
+                </select>
+
+            </div>
+
+            {
+                input === 'button' ? 
+                
+                    <Addp handler={handler} /> 
+                
+                : 
+                
+                    <Finishp Item={Item} counter={counter} option={sizeS}/>
+
+            }
 
         </div>
     )

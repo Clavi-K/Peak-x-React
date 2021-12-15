@@ -6,7 +6,13 @@
         "amount": 14,
         "cat": "shoes",
         "img": "img/items/shoes/shoes0.jpg",
-        "desc": "Talles disponiles: 41, 42, 43, 44"
+        "desc": "Talles disponiles: 41, 42, 43, 44",
+        "sizes": [
+            41,
+            42,
+            43,
+            44
+        ]
     },
     {
         "id": 1,
@@ -15,7 +21,13 @@
         "amount": 26,
         "cat": "shoes",
         "img": "img/items/shoes/shoes1.jpg",
-        "desc": "Talles disponiles: 41, 42, 43, 44"
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            41,
+            42,
+            43,
+            44
+        ]
     },
     {
         "id": 2,
@@ -24,7 +36,13 @@
         "amount": 56,
         "cat": "shoes",
         "img": "img/items/shoes/shoes2.jpg",
-        "desc": "Talles disponiles: 41, 42, 43, 44"
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            41,
+            42,
+            43,
+            44
+        ]
     },
     {
         "id": 3,
@@ -33,7 +51,13 @@
         "amount": 26,
         "cat": "shoes",
         "img": "img/items/shoes/shoes3.jpg",
-        "desc": "Talles disponiles: 41, 42, 43, 44"
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            41,
+            42,
+            43,
+            44
+        ]
     },
     {
         "id": 4,
@@ -42,7 +66,14 @@
         "amount": 14,
         "cat": "hoodies",
         "img": "img/items/hoodies/hoodies0.jpg",
-        "desc": "Talles disponiles: S, M, L, XL, XXL"
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ]
     },
     {
         "id": 5,
@@ -51,7 +82,14 @@
         "amount": 26,
         "cat": "hoodies",
         "img": "img/items/hoodies/hoodies1.jpg",
-        "desc": "Talles disponiles: S, M, L, XL, XXL"
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ]
     },
     {
         "id": 6,
@@ -60,7 +98,14 @@
         "amount": 56,
         "cat": "hoodies",
         "img": "img/items/hoodies/hoodies2.jpg",
-        "desc": "Talles disponiles: S, M, L, XL, XXL"
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ]
     },
     {
         "id": 7,
@@ -69,6 +114,61 @@
         "amount": 26,
         "cat": "hoodies",
         "img": "img/items/hoodies/hoodies3.jpg",
-        "desc": "Talles disponiles: S, M, L, XL, XXL"
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Gorra snapback Stussy azul",
+        "price": 20,
+        "amount": 15,
+        "cat": "snaps",
+        "img": "img/items/snap/snap0.jpg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            "Talle único"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Gorra snapback Stussy verde",
+        "price": 20,
+        "amount": 35,
+        "cat": "snaps",
+        "img": "img/items/snap/snap1.jpg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            "Talle único"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Gorra snapback Stussy roja",
+        "price": 20,
+        "amount": 12,
+        "cat": "snaps",
+        "img": "img/items/snap/snap2.jpg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            "Talle único"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Gorra snapback Stussy negra y naranja",
+        "price": 30,
+        "amount": 7,
+        "cat": "snaps",
+        "img": "img/items/snap/snap3.jpg",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel inventore, obcaecati mollitia nesciunt molestias? Cumque aliquid deleniti, eligendi tenetur repellat voluptatibus iste consectetur natus labore sunt placeat, distinctio dicta!",
+        "sizes": [
+            "Talle único"
+        ]
     }
 ]

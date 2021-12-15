@@ -26,6 +26,10 @@ export default function ItemList(props) {
         arr = items.filter(hoodiesFilter);
     }
 
+    if (props.cat === "snaps") {
+        arr = items.filter(snapsFilter);
+    }
+
     return (<ul className="ItemList">
 
         {arr.map(item => <Item Item={item} key={item.id}></Item>)}
