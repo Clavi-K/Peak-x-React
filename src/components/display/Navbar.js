@@ -35,9 +35,11 @@ function Navbar() {
                 </li>
             </ul>
 
-            <button className="sCart">
-                <img src={cartImg} />
-            </button>
+            <Link to={`/cart`}>
+                <button className="sCart">
+                    <img src={cartImg} />
+                </button>
+            </Link>
 
         </header>
 

@@ -26,7 +26,7 @@ export default function CartItem({ id }) {
             <h3>{Item.name}</h3>
             <h3>Talle: {purchase[1]}</h3>
             <h3>Unidades: {purchase[2]}</h3>
-            <h3>Precio final: {purchase[2] * Item.price}</h3>
+            <h3>Precio final: ${purchase[2] * Item.price}</h3>
         </li>
     )
 
