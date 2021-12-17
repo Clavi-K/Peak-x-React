@@ -1,6 +1,6 @@
 import '../css/style2.css';
 import logo from '../img/logo.png';
-import Cart from './Cart.js';
+import cartImg from '../img/cart.png';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -13,9 +13,9 @@ function Navbar() {
 
             <ul className="nav navBar" id="menu">
                 <Link to={`/`}>
-                <li className="nav-item">
-                    <a id="item" className="nav-link menu" ariaCurrent="page" href="/">Home</a>
-                </li>
+                    <li className="nav-item">
+                        <a id="item" className="nav-link menu" ariaCurrent="page" href="/">Home</a>
+                    </li>
                 </Link>
 
                 <li>
@@ -35,7 +35,9 @@ function Navbar() {
                 </li>
             </ul>
 
-            <Cart />
+            <button className="sCart">
+                <img src={cartImg} />
+            </button>
 
         </header>
 

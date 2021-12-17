@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import '../css/style2.css';
 import { NavLink } from 'react-router-dom';
+import { useContext } from 'react/cjs/react.development';
+import { CartContext } from '../../context/CartContext';
 
 function Finishp({ Item, counter, option }) {
 
-    console.log(option)
+    const { addToCart } = useContext(CartContext);
+    addToCart(Item, option, counter);
 
-    return <NavLink to={`/cart/${Item.id}/${counter}/${option}`}><button className="addToCartButton">Finalizar compra</button></NavLink>;
+    return <NavLink to={`/cart`}><button className="addToCartButton">Finalizar compra</button></NavLink>;
 
 }
 
-function Addp({ handler, counter }) {
+function Addp({ handler }) {
     return <button className="addToCartButton" onClick={handler}>Añadir al carrito</button>;
 }
 
@@ -26,6 +29,7 @@ export default function ItemCounter({ Item }) {
 
     function plusItem() {
         if (counter < stock) {
+
             setCounter(counter + 1);
             setSCounter(sCounter - 1);
 
@@ -44,13 +48,13 @@ export default function ItemCounter({ Item }) {
     }
 
     function handler() {
-        if(counter != 0){
+        if (counter !== 0) {
             setInput('input');
         }
     }
 
     function sizeHandler(e) {
-        console.log(typeof(e.target.value))
+        console.log(typeof (e.target.value))
         setSize(e.target.value);
     }
 
@@ -79,13 +83,13 @@ export default function ItemCounter({ Item }) {
             </div>
 
             {
-                input === 'button' ? 
-                
-                    <Addp handler={handler} /> 
-                
-                : 
-                
-                    <Finishp Item={Item} counter={counter} option={sizeS}/>
+                input === 'button' ?
+
+                    <Addp handler={handler} />
+
+                :
+                    
+                    <Finishp Item={Item} counter={counter} option={sizeS} />
 
             }
 

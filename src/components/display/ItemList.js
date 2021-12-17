@@ -1,22 +1,13 @@
 import '../css/style2.css';
-import ArraySet from '../utilities/ArraySet';
-import { useState, useEffect } from 'react';
 import Item from './Item';
-import { useParams } from 'react-router-dom';
+import { useContext } from 'react/cjs/react.development';
+import { CartContext } from '../../context/CartContext';
 
 export default function ItemList(props) {
 
-    const { id } = useParams();
+    const {items} = useContext(CartContext);
 
-    console.log(typeof (id));
-
-    const [items, setItems] = useState([]);
     let arr = [];
-
-    useEffect(() => {
-        ArraySet
-            .then(response => setItems(response));
-    }, []);
 
     if (props.cat === "shoes") {
         arr = items.filter(shoesFilter);

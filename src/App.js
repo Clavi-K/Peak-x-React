@@ -1,7 +1,13 @@
 import './App.css';
 import Landing from './components/display/Landing';
+import CartContextProvider from './context/CartContext';
+import { useContext } from 'react';
+import { CartContext } from './context/CartContext';
 
-function App() {
+export default function App() {
+
+  const { items } = useContext(CartContext);
+
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -20,13 +26,21 @@ function App() {
     //   </header>
     // </div>
 
-    <>
+    <>{
 
-      <Landing greeting='PEAK STREETWEAR'/>
+      items != 'undefined' ?
+
+        <CartContextProvider>
+          <Landing greeting='PEAK STREETWEAR' />
+        </CartContextProvider>
+
+        :
+        
+        null
+
+    }
 
     </>
   );
 }
-
-export default App;
 

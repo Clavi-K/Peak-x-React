@@ -5,6 +5,7 @@ import ItemList from './ItemList';
 import Navbar from './Navbar';
 import Details from './Details';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CartView  from './CartView';
 
 export default function Landing(props) {
 
@@ -25,6 +26,7 @@ export default function Landing(props) {
                     <Route exact path="/hoodies" element={<ItemList  cat="hoodies"/>} />
                     <Route exact path="/snaps" element={<ItemList  cat="snaps"/>} />
                     <Route exact path="/details/:id" element={<Details />} />
+                    <Route exact path="/cart" element={<CartView />} />
                 </Routes>
 
             </BrowserRouter>
