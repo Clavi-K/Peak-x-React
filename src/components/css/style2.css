@@ -257,6 +257,30 @@ section h1 {
     left: 3%;
 }
 
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.cartItem h3 {
+    margin-top: 2.5%;
+}
+
+.cartItem img {
+    width: 8%;
+}
+
+.cartItem button {
+    background-color: black;
+    border-color: #a11600;
+    width: 1.5%;
+    height: 1.5%;
+    font-size: 130%;
+    margin-top: 2.5%;
+}
 
 /* --- IDs --- */
 

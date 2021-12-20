@@ -7,8 +7,8 @@ export const CartContext = createContext([]);
 export default function CartContextProvider({ children }) {
 
     const [items, setItems] = useState([]);
-    const [cart] = useState([]);
-
+    const [cart, setCart] = useState([]);
+    
     useEffect(() => {
         ArraySet
             .then(response => setItems(response));
@@ -16,42 +16,28 @@ export default function CartContextProvider({ children }) {
 
     function addToCart(Item, size, amnt) {
 
-        console.log(amnt);
-
         let cartBool = false;
-        let purchase = [];
-        purchase[0] = Item.id;
-        purchase[1] = size;
-        purchase[2] = amnt;
-
-        console.log(purchase[2]);
+        let purchase = { id: Item.id, size: size, amount: amnt }
 
         if (cart.length === 0) {
 
-            if (purchase[2] < Item.amount) {
-                cart.push(purchase);
-                return;
-            }
+            addtoArr(Item, purchase);
 
         } else {
 
             for (let i = 0; i < cart.length; i++) {
 
-                if (cart[i][0] === purchase[0]) {
+                if (purchase.id === cart[i].id) {
 
                     cartBool = true;
-    
+
                 }
 
             }
 
             if (cartBool === false) {
 
-                if (purchase[2] < Item.amount) {
-
-                    cart.push(purchase);
-                    return;
-                }
+                addtoArr(Item, purchase);
 
             }
 
@@ -61,8 +47,18 @@ export default function CartContextProvider({ children }) {
 
     }
 
+    function addtoArr(Item, purchase) {
+
+        if (Item.amount > purchase.amount) {
+
+            cart.push(purchase);
+
+        }
+
+    }
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, items }}>
+        <CartContext.Provider value={{ cart, items, addToCart, setCart }}>
             {children}
         </CartContext.Provider>
     )

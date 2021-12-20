@@ -16,7 +16,7 @@ export default function Details() {
     return (
         <section className="details">
             {
-                Item != undefined ?
+                Item !== undefined ?
 
                     <>
                         <img src={"../../../" + Item.img} className=""></img>

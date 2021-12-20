@@ -54,7 +54,6 @@ export default function ItemCounter({ Item }) {
     }
 
     function sizeHandler(e) {
-        console.log(typeof (e.target.value))
         setSize(e.target.value);
     }
 
