@@ -1,17 +1,19 @@
 import { createContext, useState, useEffect } from "react";
 import ArraySet from "../components/utilities/ArraySet";
-
-
 export const CartContext = createContext([]);
 
 export default function CartContextProvider({ children }) {
 
     const [items, setItems] = useState([]);
     const [cart, setCart] = useState([]);
+    const [loading, setLoading] = useState();
+    const [cartL, setCartL] = useState();
+    const [cartP, setCartP] = useState();
     
     useEffect(() => {
         ArraySet
             .then(response => setItems(response));
+            setLoading(true);
     }, []);
 
     function addToCart(Item, size, amnt) {
@@ -49,7 +51,7 @@ export default function CartContextProvider({ children }) {
 
     function addtoArr(Item, purchase) {
 
-        if (Item.amount > purchase.amount) {
+        if (Item.amount >= purchase.amount) {
 
             cart.push(purchase);
 
@@ -58,7 +60,7 @@ export default function CartContextProvider({ children }) {
     }
 
     return (
-        <CartContext.Provider value={{ cart, items, addToCart, setCart }}>
+        <CartContext.Provider value={{ cart, items, loading, cartL, cartP, setCartP, setCartL, setLoading, addToCart, setCart }}>
             {children}
         </CartContext.Provider>
     )

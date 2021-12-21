@@ -1,40 +1,52 @@
-import react from "react";
 import { useContext, useState } from "react/cjs/react.development";
 import { CartContext } from "../../context/CartContext";
 
-export default function CartItem({ purchase }) {
+export default function CartItem({ purchase, cartChange }) {
 
-    const { items } = useContext(CartContext);
     const { cart } = useContext(CartContext);
-    const { setCart } = useContext(CartContext);
+    const { items } = useContext(CartContext);
+    const {setCartL} = useContext(CartContext);
     let Item = items[purchase.id];
+    const { setCart } = useContext(CartContext);
     const [pAmount, setPAmount] = useState(purchase.amount);
 
     const removeItem = (purchase) => {
-
+        
         setCart(cart.filter(function (e) {
             return e !== purchase;
         }));
+
+        cartChange();
+
     }
 
     function cartItemP() {
+
         if (purchase.amount < Item.amount) {
             setPAmount(pAmount + 1);
             purchase.amount = pAmount + 1;
 
         }
+
+        cartChange();
+
     }
 
     function cartItemM() {
+
         if (purchase.amount > 1) {
+
             setPAmount(pAmount - 1);
             purchase.amount = pAmount - 1;
 
         } else {
-            setCart(cart.filter(function (e) {
-                return e !== purchase;
-            }));
+
+            removeItem(purchase);
+
         }
+
+        cartChange();
+
     }
 
     return (

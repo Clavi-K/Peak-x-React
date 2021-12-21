@@ -8,8 +8,6 @@ const prom = new Promise((resolve) => {
 
     }, 2000);
 
-
-
 });
 
 export default prom;

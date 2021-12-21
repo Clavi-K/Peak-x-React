@@ -17,7 +17,7 @@ export default function Categories() {
             <Link to={`/shoes`}>
                 <div className='Category'>
                     <img src={"img/categories/shoe.jpg"}></img>
-                    <h2 className='caTitle'><a>Shoes</a></h2>
+                    <h2 className='caTitle'><a>Calzado</a></h2>
                 </div>
             </Link>
 

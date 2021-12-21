@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import '../css/style2.css';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react/cjs/react.development';
@@ -28,13 +28,14 @@ export default function ItemCounter({ Item }) {
     const [input, setInput] = useState('button');
 
     function plusItem() {
+
         if (counter < stock) {
 
             setCounter(counter + 1);
             setSCounter(sCounter - 1);
 
         }
-    }
+    };
 
     function minusItem() {
 
@@ -76,7 +77,7 @@ export default function ItemCounter({ Item }) {
                 <span className="selectText">Talle:</span>
 
                 <select className="itemSelect" defaultValue={Item.sizes[0].toString()} onChange={sizeHandler}>
-                    {Item.sizes.map(size => <option className="selectOption" value={size}>{size}</option>)}
+                    {Item.sizes.map(size => <option className="selectOption" value={size} key={size}>{size}</option>)}
                 </select>
 
             </div>
@@ -86,8 +87,8 @@ export default function ItemCounter({ Item }) {
 
                     <Addp handler={handler} />
 
-                :
-                    
+                    :
+
                     <Finishp Item={Item} counter={counter} option={sizeS} />
 
             }

@@ -1,9 +1,22 @@
+import React from 'react';
 import '../css/style2.css';
 import logo from '../img/logo.png';
 import cartImg from '../img/cart.png';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react/cjs/react.development';
+import { CartContext } from '../../context/CartContext';
 
 function Navbar() {
+
+    const { cartL } = useContext(CartContext);
+    let style;
+
+    if (cartL === 0) {
+        style = "itemAmountE";
+    } else {
+        style = "itemAmount";
+    }
+
     return (
 
         <header>
@@ -41,9 +54,11 @@ function Navbar() {
                 </button>
             </Link>
 
+            <p className={style}>{cartL}</p>
+
         </header>
 
     )
 }
 
-export default Navbar;
+export default React.memo(Navbar);
