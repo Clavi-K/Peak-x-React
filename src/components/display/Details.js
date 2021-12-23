@@ -12,16 +12,12 @@ export default function Details() {
     const [Item, setItem] = useState();
 
     useEffect(() => {
+        const db = getFirestore();
+        const querydb = doc(db, 'Items', id);
+        getDoc(querydb)
+            .then(response => setItem({ id: response.id, ...response.data() }));
 
-        if (Item === undefined) {
-
-            const db = getFirestore();
-            const querydb = doc(db, 'Items', id);
-            getDoc(querydb)
-                .then(response => setItem({ id: response.id, ...response.data() }));
-        }
-
-    }, [Item]);
+    }, []);
 
     return (
         <section className="details">

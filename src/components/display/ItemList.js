@@ -6,20 +6,16 @@ import { collection, getDocs, getFirestore, query, where } from 'firebase/firest
 import Loader from "react-loader-spinner";
 
 export default function ItemList(props) {
-    
+
     const [arr, setArr] = useState([]);
 
     useEffect(() => {
 
-        if (arr.length === 0) {
-            const db = getFirestore();
-            const que = query(collection(db, "Items"), where("cat", "==", props.cat));
-            getDocs(que).then((response) => {
-                setArr(response.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-            });
-            
-            
-        }
+        const db = getFirestore();
+        const que = query(collection(db, "Items"), where("cat", "==", props.cat));
+        getDocs(que).then((response) => {
+            setArr(response.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        });
 
     }, []);
 
