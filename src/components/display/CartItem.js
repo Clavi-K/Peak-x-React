@@ -1,14 +1,13 @@
-import { useContext, useState } from "react/cjs/react.development";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
+
 
 export default function CartItem({ purchase, cartChange }) {
 
     const { cart } = useContext(CartContext);
-    const { items } = useContext(CartContext);
-    const {setCartL} = useContext(CartContext);
-    let Item = items[purchase.id];
     const { setCart } = useContext(CartContext);
     const [pAmount, setPAmount] = useState(purchase.amount);
+
 
     const removeItem = (purchase) => {
         
@@ -22,7 +21,7 @@ export default function CartItem({ purchase, cartChange }) {
 
     function cartItemP() {
 
-        if (purchase.amount < Item.amount) {
+        if (purchase.amount < purchase.item.amount) {
             setPAmount(pAmount + 1);
             purchase.amount = pAmount + 1;
 
@@ -51,13 +50,13 @@ export default function CartItem({ purchase, cartChange }) {
 
     return (
         <li className="cartItem">
-            <img src={Item.img}></img>
-            <h3>{Item.name}</h3>
+            <img src={purchase.item.img} alt=""></img>
+            <h3>{purchase.item.name}</h3>
             <h3>Talle: {purchase.size}</h3>
             <button onClick={cartItemM}>-</button>
             <h3>Unidades: {pAmount}</h3>
             <button onClick={cartItemP}>+ </button>
-            <h3>Precio: ${pAmount * Item.price}</h3>
+            <h3>Precio: ${pAmount * purchase.item.price}</h3>
             <button onClick={() => removeItem(purchase)}>X</button>
         </li>
     )

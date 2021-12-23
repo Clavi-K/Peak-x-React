@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './components/css/style2.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { getFirestorePeak } from './config/getFirestorePeak';
+
+
+getFirestorePeak();
 
 ReactDOM.render(
   <React.StrictMode >

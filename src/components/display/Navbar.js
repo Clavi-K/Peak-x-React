@@ -46,15 +46,17 @@ function Navbar() {
                 <li className="nav-item">
                     <a id="item" className="nav-link menu" href="*">Contáctanos</a>
                 </li>
+
+                <li>
+                    <Link to={`/cart`}>
+                        <button className="sCart">
+                            <img src={cartImg} alt="" />
+                        </button>
+                    </Link>
+
+                    <p className={style}>{cartL}</p>
+                </li>
             </ul>
-
-            <Link to={`/cart`}>
-                <button className="sCart">
-                    <img src={cartImg} />
-                </button>
-            </Link>
-
-            <p className={style}>{cartL}</p>
 
         </header>
 

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import '../css/style2.css';
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react/cjs/react.development';
@@ -68,7 +68,7 @@ export default function ItemCounter({ Item }) {
 
             <div className="cDisplay">
                 <button className="cButtons" onClick={minusItem}>-</button>
-                <p>{counter}</p>
+                <p className='counter'>{counter}</p>
                 <button className="cButtons" onClick={plusItem}>+</button>
             </div>
 

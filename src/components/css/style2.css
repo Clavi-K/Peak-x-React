@@ -149,7 +149,7 @@ section h1 {
 }
 
 .cDisplay p {
-    top: 101% !important;
+    top: 97% !important;
     left: 25% !important;
 }
 
@@ -220,21 +220,21 @@ section h1 {
 }
 
 .sCart {
-    left: 95.5%;
-    top: 3.2%;
-    width: 2%;
+    left: 21vw;
+    top: .4vh;
+    width: 12%;
 }
 
 .navBar {
     position: absolute;
     font-size: 110%;
-    bottom: 91%;
+    bottom: 91vh;
     right: 0%;
 }
 
 .NavTitle {
     position: absolute;
-    top: 3.6%;
+    top: 4%;
     left: 8%;
 }
 
@@ -242,12 +242,12 @@ section h1 {
     color:#a11600;
     background-color: black;
     border-radius: 50%;
-    width: 2%;
+    width: 3vh;
     position: absolute;
-    top: 3.7%;
-    right: 2%;
+    bottom: 1.2vh;
+    left: 21.4vw;
     font-weight: bolder;
-    font-size: 120%;
+    font-size: 100%;
 }
 
 .itemAmountE {
@@ -267,7 +267,7 @@ section h1 {
     text-decoration: underline;
 }
 
-.details p {
+.itemDesc {
     position: absolute;
     top: 86%;
     left: 3%;
@@ -317,6 +317,7 @@ section h1 {
 }
 
 #cstock {
+    position: absolute;
     top: 88%;
     left: 22.4%;
 }

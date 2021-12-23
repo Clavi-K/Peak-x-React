@@ -8,14 +8,13 @@ export default function CartView() {
 
     const { cart } = useContext(CartContext);
     const { setCartL, setCartP, cartP } = useContext(CartContext);
-    const { items } = useContext(CartContext);
     let cartLength = cart.length;
 
     cartChange();
 
     return (
         <>
-            {cartLength != 0 ?
+            {cartLength !== 0 ?
 
                 <>
 
@@ -23,7 +22,7 @@ export default function CartView() {
                         {cart.map(item => <CartItem purchase={item} cartChange={cartChange}></CartItem>)}
                     </ul>
 
-                    {cartP != 0 ?
+                    {cartP !== 0 ?
 
                         <p>Precio final: ${cartP}</p>
 
@@ -56,12 +55,12 @@ export default function CartView() {
 
         let tempValues = [0, 0];
 
-        if (cartLength != 0) {
+        if (cartLength !== 0) {
 
             for (const item of cart) {
 
                 tempValues[0] += item.amount;
-                tempValues[1] += item.amount * items[item.id].price;
+                tempValues[1] += item.amount * item.item.price
 
             }
 

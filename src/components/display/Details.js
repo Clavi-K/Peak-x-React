@@ -2,16 +2,26 @@ import React from 'react';
 import '../css/style2.css';
 import { useParams } from 'react-router-dom';
 import ItemCounter from './ItemCounter';
-import { useContext } from 'react/cjs/react.development';
-import { CartContext } from '../../context/CartContext';
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
+import Loader from "react-loader-spinner";
 
 export default function Details() {
 
-    const { items } = useContext(CartContext);
     const { id } = useParams();
-    let ID = parseInt(id);
+    const [Item, setItem] = useState();
 
-    let Item = itemReturner(items, ID);
+    useEffect(() => {
+
+        if (Item === undefined) {
+
+            const db = getFirestore();
+            const querydb = doc(db, 'Items', id);
+            getDoc(querydb)
+                .then(response => setItem({ id: response.id, ...response.data() }));
+        }
+
+    }, [Item]);
 
     return (
         <section className="details">
@@ -19,37 +29,19 @@ export default function Details() {
                 Item !== undefined ?
 
                     <>
-                        <img src={"../../../" + Item.img} className=""></img>
+                        <img src={"../../../" + Item.img} alt=""></img>
                         {Item.sizes ? <ItemCounter Item={Item} key={Item.id} /> : null}
                         <h4>Descripción</h4>
-                        <p>{Item.desc}</p>
+                        <p className='itemDesc'>{Item.desc}</p>
                     </>
 
-                :
+                    :
 
-                    null
+                    <Loader className="spinner" type="Puff" color="#a11600" loading />
 
             }
 
         </section>
     )
-
-}
-
-function itemReturner(response, id) {
-
-    let value;
-
-    for (const i of response) {
-
-        if (i.id === id) {
-
-            value = i;
-
-        }
-
-    }
-
-    return value;
 
 }

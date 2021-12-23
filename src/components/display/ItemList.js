@@ -1,42 +1,40 @@
 import '../css/style2.css';
 import Item from './Item';
-import { useContext } from 'react/cjs/react.development';
+import { useContext, useState, useEffect } from 'react/cjs/react.development';
 import { CartContext } from '../../context/CartContext';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import Loader from "react-loader-spinner";
 
 export default function ItemList(props) {
+    
+    const [arr, setArr] = useState([]);
 
-    const {items} = useContext(CartContext);
+    useEffect(() => {
 
-    let arr = [];
+        if (arr.length === 0) {
+            const db = getFirestore();
+            const que = query(collection(db, "Items"), where("cat", "==", props.cat));
+            getDocs(que).then((response) => {
+                setArr(response.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+            });
+            
+            
+        }
 
-    if (props.cat === "shoes") {
-        arr = items.filter(shoesFilter);
-    }
-
-    if (props.cat === "hoodies") {
-        arr = items.filter(hoodiesFilter);
-    }
-
-    if (props.cat === "snaps") {
-        arr = items.filter(snapsFilter);
-    }
+    }, []);
 
     return (<ul className="ItemList">
 
-        {arr.map(item => <Item Item={item} key={item.id}></Item>)}
+        {arr.length === 0 ?
+
+            <Loader className="spinner" type="Puff" color="#a11600" loading />
+
+            :
+
+            arr.map(item => <Item Item={item} key={item.id}></Item>)
+
+        }
 
     </ul>);
-}
-
-function shoesFilter(item) {
-    return (item.cat === "shoes");
-}
-
-function snapsFilter(item) {
-    return (item.cat === "snaps");
-}
-
-function hoodiesFilter(item) {
-    return (item.cat === "hoodies");
 }
 

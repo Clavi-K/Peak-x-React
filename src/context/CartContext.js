@@ -1,25 +1,18 @@
 import { createContext, useState, useEffect } from "react";
-import ArraySet from "../components/utilities/ArraySet";
+import {prom} from "../components/utilities/Queries";
 export const CartContext = createContext([]);
 
 export default function CartContextProvider({ children }) {
 
-    const [items, setItems] = useState([]);
     const [cart, setCart] = useState([]);
-    const [loading, setLoading] = useState();
+
     const [cartL, setCartL] = useState();
     const [cartP, setCartP] = useState();
-    
-    useEffect(() => {
-        ArraySet
-            .then(response => setItems(response));
-            setLoading(true);
-    }, []);
 
     function addToCart(Item, size, amnt) {
 
         let cartBool = false;
-        let purchase = { id: Item.id, size: size, amount: amnt }
+        let purchase = { item: Item, size: size, amount: amnt }
 
         if (cart.length === 0) {
 
@@ -27,9 +20,9 @@ export default function CartContextProvider({ children }) {
 
         } else {
 
-            for (let i = 0; i < cart.length; i++) {
+            for (const i of cart) {
 
-                if (purchase.id === cart[i].id) {
+                if (purchase.item === i.item) {
 
                     cartBool = true;
 
@@ -45,7 +38,7 @@ export default function CartContextProvider({ children }) {
 
         }
 
-
+        console.log(cart.length);
 
     }
 
@@ -60,7 +53,7 @@ export default function CartContextProvider({ children }) {
     }
 
     return (
-        <CartContext.Provider value={{ cart, items, loading, cartL, cartP, setCartP, setCartL, setLoading, addToCart, setCart }}>
+        <CartContext.Provider value={{ cart, cartL, cartP, setCartP, setCartL, addToCart, setCart }}>
             {children}
         </CartContext.Provider>
     )
