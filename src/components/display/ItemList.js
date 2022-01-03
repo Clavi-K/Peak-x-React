@@ -1,7 +1,6 @@
 import '../css/style2.css';
 import Item from './Item';
-import { useContext, useState, useEffect } from 'react/cjs/react.development';
-import { CartContext } from '../../context/CartContext';
+import { useState, useEffect } from 'react/cjs/react.development';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import Loader from "react-loader-spinner";
 
@@ -17,7 +16,7 @@ export default function ItemList(props) {
             setArr(response.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         });
 
-    }, []);
+    }, [props.cat]);
 
     return (<ul className="ItemList">
 

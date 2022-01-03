@@ -4,17 +4,17 @@ import { NavLink } from 'react-router-dom';
 import { useContext } from 'react/cjs/react.development';
 import { CartContext } from '../../context/CartContext';
 
-function Finishp({ Item, counter, option }) {
+function Finishp() {
 
-    const { addToCart } = useContext(CartContext);
-    addToCart(Item, option, counter);
 
     return <NavLink to={`/cart`}><button className="addToCartButton">Finalizar compra</button></NavLink>;
 
 }
 
-function Addp({ handler }) {
-    return <button className="addToCartButton" onClick={handler}>Añadir al carrito</button>;
+function Addp({ handler}) {
+
+
+    return <button className="addToCartButton" onClick={handler} >Añadir al carrito</button>;
 }
 
 export default function ItemCounter({ Item }) {
@@ -26,6 +26,8 @@ export default function ItemCounter({ Item }) {
     const [sCounter, setSCounter] = useState(stock);
     const [sizeS, setSize] = useState(Item.sizes[0]);
     const [input, setInput] = useState('button');
+    const { addToCart } = useContext(CartContext);
+    const { cart } = useContext(CartContext);
 
     function plusItem() {
 
@@ -49,8 +51,13 @@ export default function ItemCounter({ Item }) {
     }
 
     function handler() {
+
         if (counter !== 0) {
+
             setInput('input');
+            addToCart(Item, sizeS, counter);
+            console.log(cart);
+
         }
     }
 
@@ -89,7 +96,7 @@ export default function ItemCounter({ Item }) {
 
                     :
 
-                    <Finishp Item={Item} counter={counter} option={sizeS} />
+                    <Finishp />
 
             }
 

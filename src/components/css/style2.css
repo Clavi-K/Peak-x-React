@@ -219,6 +219,10 @@ section h1 {
     width: 85%;
 }
 
+.catLink:hover {
+    text-decoration: none;
+}
+
 .sCart {
     left: 21vw;
     top: .4vh;

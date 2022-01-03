@@ -7,24 +7,24 @@ export default function Categories() {
     return (
         <section className='Categories'>
 
-            <Link to={`/snaps`}>
+            <Link to={`/snaps`} className='catLink'>
                 <div className='Category'>
                     <img src={"img/categories/snap.jpg"} alt=""></img>
-                    <h2 className='caTitle'><a>Snapbacks</a></h2>
+                    <h2 className='caTitle'>Snapbacks</h2>
                 </div>
             </Link>
 
-            <Link to={`/shoes`}>
+            <Link to={`/shoes`} className='catLink'>
                 <div className='Category'>
                     <img src={"img/categories/shoe.jpg"} alt=""></img>
-                    <h2 className='caTitle'><a>Calzado</a></h2>
+                    <h2 className='caTitle'>Calzado</h2>
                 </div>
             </Link>
 
-            <Link to={`/hoodies`}>
+            <Link to={`/hoodies`} className='catLink'>
                 <div className='Category'>
                     <img src={"img/categories/hoodie.jpg"} alt=""></img>
-                    <h2 className='caTitle'><a>Hoodies</a></h2>
+                    <h2 className='caTitle'>Hoodies</h2>
                 </div>
             </Link>
 

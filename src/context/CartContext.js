@@ -1,5 +1,4 @@
-import { createContext, useState, useEffect } from "react";
-import {prom} from "../components/utilities/Queries";
+import { createContext, useState } from "react";
 export const CartContext = createContext([]);
 
 export default function CartContextProvider({ children }) {
@@ -22,7 +21,7 @@ export default function CartContextProvider({ children }) {
 
             for (const i of cart) {
 
-                if (purchase.item === i.item) {
+                if (purchase.item.id === i.item.id) {
 
                     cartBool = true;
 
@@ -37,8 +36,6 @@ export default function CartContextProvider({ children }) {
             }
 
         }
-
-        console.log(cart.length);
 
     }
 

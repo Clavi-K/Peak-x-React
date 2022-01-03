@@ -17,7 +17,7 @@ export default function Details() {
         getDoc(querydb)
             .then(response => setItem({ id: response.id, ...response.data() }));
 
-    }, []);
+    }, [id]);
 
     return (
         <section className="details">

@@ -20,8 +20,10 @@ function Navbar() {
     return (
 
         <header>
-
-            <img src={logo} alt="peak streetwear logo"></img>
+            <Link to={`/`}>
+                <img src={logo} alt="peak streetwear logo"></img>
+            </Link>
+            
             <h1 className="NavTitle">PEAK STREETWEAR</h1>
 
             <ul className="nav navBar" id="menu">
