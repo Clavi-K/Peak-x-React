@@ -19,7 +19,7 @@ export default function CartView() {
                 <>
 
                     <ul className="cartContainer">
-                        {cart.map(item => <CartItem purchase={item} cartChange={cartChange}></CartItem>)}
+                        {cart.map(item => <CartItem purchase={item} cartChange={cartChange} id={item.id}></CartItem>)}
                     </ul>
 
                     {cartP !== 0 ?

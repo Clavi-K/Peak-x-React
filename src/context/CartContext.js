@@ -5,8 +5,8 @@ export default function CartContextProvider({ children }) {
 
     const [cart, setCart] = useState([]);
 
-    const [cartL, setCartL] = useState();
-    const [cartP, setCartP] = useState();
+    const [cartL, setCartL] = useState(0);
+    const [cartP, setCartP] = useState(0);
 
     function addToCart(Item, size, amnt) {
 
@@ -44,6 +44,7 @@ export default function CartContextProvider({ children }) {
         if (Item.amount >= purchase.amount) {
 
             cart.push(purchase);
+            setCartL(cartL + purchase.amount);
 
         }
 
