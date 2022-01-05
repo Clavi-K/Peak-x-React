@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Details from './Details';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartView from './CartView';
+import OrderForm from './OrderForm';
 
 function Landing(props) {
 
@@ -26,6 +27,7 @@ function Landing(props) {
                     <Route exact path="/snaps" element={<ItemList cat="snaps" />} />
                     <Route exact path="/details/:id" element={<Details />} />
                     <Route exact path="/cart" element={<CartView />} />
+                    <Route exact path="/newOrder" element={<OrderForm />} />
 
                 </Routes>
 

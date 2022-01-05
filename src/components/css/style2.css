@@ -313,6 +313,24 @@ section h1 {
     margin-left: 32.5%;
 }
 
+.cartButton {
+    background-color: black;
+    border-style: solid;
+    border-color: #a11600;
+    padding: .5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: inline;
+}
+
+.orderText {
+    margin-top: 3%;
+}
+
+.orderP {
+    font-size: 120%;
+}
+
 /* --- IDs --- */
 
 #title {
@@ -337,4 +355,5 @@ section h1 {
     background-color: #a11600;
     color: black;
     text-decoration: none;
+    font-weight: bold;
 }

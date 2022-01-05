@@ -31,6 +31,9 @@ export default function CartView() {
                         null
 
                     }
+
+                    <Link to={'/newOrder'} className='catLink'><p className="cartButton caTitle">Siguiente paso</p></Link>
+
                 </>
 
 
