@@ -331,6 +331,30 @@ section h1 {
     font-size: 120%;
 }
 
+.orderForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.orderForm input {
+    background: black;
+    border-style: solid;
+    color: #a11600;
+    border-color: #a11600;
+    margin: auto;
+    margin-top: 1%;
+    width: 60%;
+}
+
+.orderForm button {
+    margin: auto;
+    margin-top: 1%;
+    width: 70%;
+    background-color: black;
+    border-style: solid;
+    border-color: #a11600;
+}
+
 /* --- IDs --- */
 
 #title {

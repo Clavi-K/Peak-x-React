@@ -10,11 +10,18 @@ export default function OrderForm() {
     const { cartP, setCartP } = useContext(CartContext);
     const { cartL, setCartL } = useContext(CartContext);
     const [orderId, setOrderId] = useState('');
-
+    const [error, setError] = useState('');
     const orderSubmit = (e) => {
         e.preventDefault();
 
+        let errorB = false;
         let order = {};
+
+
+        if (!e.target.fullName.value || !e.target.tel.value || !e.target.email.value) {
+            setError("Por favor completar todos los campos");
+            errorB = true;
+        }
 
         order.buyer = { fullName: e.target.fullName.value, tel: e.target.tel.value, email: e.target.email.value };
         order.total = cartP;
@@ -32,26 +39,28 @@ export default function OrderForm() {
 
         // --- FIREBASE ORDER ---
 
-        const db = getFirestore();
-        const batch = writeBatch(db);
-        const collec = collection(db, 'Orders');
-        addDoc(collec, order).then(response => setOrderId(response.id));
+        if (errorB === false) {
+            const db = getFirestore();
+            const batch = writeBatch(db);
+            const collec = collection(db, 'Orders');
+            addDoc(collec, order).then(response => setOrderId(response.id));
 
-        for (const item of cart) {
+            for (const item of cart) {
 
-            let itemDoc = doc(db, 'Items', item.item.id);
+                let itemDoc = doc(db, 'Items', item.item.id);
 
-            batch.update(itemDoc, {
-                amount: item.item.amount - item.amount
-            });
+                batch.update(itemDoc, {
+                    amount: item.item.amount - item.amount
+                });
 
+            }
+
+            setCart([]);
+            setCartL(0);
+            setCartP(0);
+
+            batch.commit();
         }
-
-        setCart([]);
-        setCartL(0);
-        setCartP(0);
-
-        batch.commit();
 
     }
 
@@ -61,13 +70,15 @@ export default function OrderForm() {
 
             {cartL !== 0 ?
 
-                <form method="POST" onSubmit={orderSubmit}>
+                <form method="POST" className="orderForm" onSubmit={orderSubmit}>
 
                     <input type="text" name="fullName" placeholder="Complete name" />
                     <input type="number" name="tel" placeholder="Phone number" />
                     <input type="email" name="email" placeholder="Email" />
 
-                    <button type="submit">Finalizar compra</button>
+                    <p>{error}</p>
+
+                    <button type="submit" className="caTitle">Finalizar compra</button>
 
                 </form >
 
