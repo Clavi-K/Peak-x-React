@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../css/style2.css';
 import logo from '../img/logo.png';
 import cartImg from '../img/cart.png';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react/cjs/react.development';
 import { CartContext } from '../../context/CartContext';
 
 function Navbar() {

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import '../css/style2.css';
 import { NavLink } from 'react-router-dom';
-import { useContext } from 'react/cjs/react.development';
+import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
 function Finishp() {
-
 
     return <NavLink to={`/cart`}><button className="addToCartButton">Finalizar compra</button></NavLink>;
 
@@ -56,7 +55,6 @@ export default function ItemCounter({ Item }) {
 
             setInput('input');
             addToCart(Item, sizeS, counter);
-            console.log(cart);
 
         }
     }

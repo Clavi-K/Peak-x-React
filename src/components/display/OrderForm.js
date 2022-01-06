@@ -1,4 +1,4 @@
-import { useContext, useState } from "react/cjs/react.development";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { addDoc, collection, doc, getFirestore, writeBatch } from 'firebase/firestore';
 import { Link } from 'react-router-dom';

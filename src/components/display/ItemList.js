@@ -1,6 +1,6 @@
 import '../css/style2.css';
 import Item from './Item';
-import { useState, useEffect } from 'react/cjs/react.development';
+import { useState, useEffect } from 'react';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import Loader from "react-loader-spinner";
 
