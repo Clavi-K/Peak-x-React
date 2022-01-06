@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Peak-React/static/css/main.fee6d535.chunk.css",
+    "main.js": "/Peak-React/static/js/main.61139ad5.chunk.js",
+    "main.js.map": "/Peak-React/static/js/main.61139ad5.chunk.js.map",
+    "runtime-main.js": "/Peak-React/static/js/runtime-main.b7e18ff1.js",
+    "runtime-main.js.map": "/Peak-React/static/js/runtime-main.b7e18ff1.js.map",
+    "static/js/2.e1c9865f.chunk.js": "/Peak-React/static/js/2.e1c9865f.chunk.js",
+    "static/js/2.e1c9865f.chunk.js.map": "/Peak-React/static/js/2.e1c9865f.chunk.js.map",
+    "static/js/3.9dea67a3.chunk.js": "/Peak-React/static/js/3.9dea67a3.chunk.js",
+    "static/js/3.9dea67a3.chunk.js.map": "/Peak-React/static/js/3.9dea67a3.chunk.js.map",
+    "index.html": "/Peak-React/index.html",
+    "static/css/main.fee6d535.chunk.css.map": "/Peak-React/static/css/main.fee6d535.chunk.css.map",
+    "static/js/2.e1c9865f.chunk.js.LICENSE.txt": "/Peak-React/static/js/2.e1c9865f.chunk.js.LICENSE.txt",
+    "static/media/cart.30b48230.png": "/Peak-React/static/media/cart.30b48230.png",
+    "static/media/logo.e6819c6c.png": "/Peak-React/static/media/logo.e6819c6c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b7e18ff1.js",
+    "static/js/2.e1c9865f.chunk.js",
+    "static/css/main.fee6d535.chunk.css",
+    "static/js/main.61139ad5.chunk.js"
+  ]
+}
