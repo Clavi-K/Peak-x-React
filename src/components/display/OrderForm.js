@@ -23,6 +23,11 @@ export default function OrderForm() {
             errorB = true;
         }
 
+        if (e.target.email.value !== e.target.emailC.value) {
+            setError("Los correos electrónicos no coinciden.");
+            errorB = true;
+        }
+
         order.buyer = { fullName: e.target.fullName.value, tel: e.target.tel.value, email: e.target.email.value };
         order.total = cartP;
 
@@ -72,9 +77,10 @@ export default function OrderForm() {
 
                 <form method="POST" className="orderForm" onSubmit={orderSubmit}>
 
-                    <input type="text" name="fullName" placeholder="Complete name" />
-                    <input type="number" name="tel" placeholder="Phone number" />
+                    <input type="text" name="fullName" placeholder="Nombre completo" />
+                    <input type="number" name="tel" placeholder="Número de teléfono" />
                     <input type="email" name="email" placeholder="Email" />
+                    <input type="email" name="emailC" placeholder="Confirmar email" />
 
                     <p>{error}</p>
 

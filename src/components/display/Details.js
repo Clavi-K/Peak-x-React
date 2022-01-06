@@ -19,6 +19,8 @@ export default function Details() {
 
     }, [id]);
 
+
+
     return (
         <section className="details">
             {
