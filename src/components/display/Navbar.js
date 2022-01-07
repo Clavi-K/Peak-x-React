@@ -22,7 +22,7 @@ function Navbar() {
             <Link to={`/`}>
                 <img src={logo} alt="peak streetwear logo"></img>
             </Link>
-            
+
             <h1 className="NavTitle">PEAK STREETWEAR</h1>
 
             <ul className="nav navBar" id="menu">
@@ -36,17 +36,21 @@ function Navbar() {
                     <p>|</p>
                 </li>
 
-                <li className="nav-item">
-                    <a id="item" className="nav-link menu" href="*">Nosotros</a>
-                </li>
+                <Link to={`/aboutus`}>
+                    <li className="nav-item">
+                        <a id="item" className="nav-link menu" href="*">Nosotros</a>
+                    </li>
+                </Link>
 
                 <li>
                     <p>|</p>
                 </li>
 
-                <li className="nav-item">
-                    <a id="item" className="nav-link menu" href="*">Contáctanos</a>
-                </li>
+                <Link to={`/contact`}>
+                    <li className="nav-item">
+                        <a id="item" className="nav-link menu" href="*">Contáctanos</a>
+                    </li>
+                </Link>
 
                 <li>
                     <Link to={`/cart`}>

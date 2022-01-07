@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+#### Peak Streetwear
+
+##### Características generales
+
+Peak Streetwear es un e-commerce creado en React. 
+
+##### Estilos
+
+Para los estilos, uso cosas muy puntuales de bootstrap. Lo demás, es todo propio.
+
+##### Base de datos
+
+Uso Firestore. Están las características de los prodcutos almacenados, pero las imágenes están en una carpeta dentro del proyecto.
+
+Además, las órdenes de compra también son almacenadas. Éstas modifican el stock de los productos, y cuando un producto llega a cero, no es posible realizar la compra.
+
+Por el momento, el formulario de contacto no se almacena en la base de datos. Es simplemente estético.
+
+##### Funcionamiento
+
+Se trata de una SPA, done sólo se llaman los productos necesarios. Al no haber una categoría de "todos", nunca se hace una petición donde se involucren todos los productos.
+Cuando se selecciona una categoría, se hace una petición a la base de datos de sólo los productos que forman parte de esa categoría.

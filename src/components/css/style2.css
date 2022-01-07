@@ -7,6 +7,14 @@
     color: #a11600;
 }
 
+hr {
+    height: 1%;
+    background: #a11600;
+    border: none;
+    width: 70%;
+    margin: auto;
+}
+
 html {
     background-color: black;
 }
@@ -353,6 +361,94 @@ section h1 {
     background-color: black;
     border-style: solid;
     border-color: #a11600;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInput {
+    width: 80%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    background-color: black;
+    border-style:groove;
+    border-color: #a11600;
+    border-radius: 3px;
+}
+
+.contactInput {
+    width: 80%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    background-color: black;
+    border-style:groove;
+    border-color: #a11600;
+    border-radius: 3px;
+}
+
+.contactButton {
+    margin: auto;
+    width: 40%;
+    border-style: solid;
+    border-color: #a11600;
+    color: #a11600;
+    margin-top: 1%;
+}
+
+.label {
+    font-size: 120%;
+    text-align: start;
+    margin-left: 1%;
+}
+
+.contactSocial {
+    margin-top: 2%;
+}
+
+.contactMedia {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+}
+
+.contactFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    margin-left: 20%;
+}
+
+.contactMedia img {
+    width: 10%;
+}
+
+.contactMedia p {
+    margin-left: .5%;
+    margin-top: 3%;
+}
+
+.aboutDiv {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+}
+
+.imgDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgDiv img {
+    width: 120%;
+}
+
+.imgDiv h3 {
+    margin-left: 5%;
 }
 
 /* --- IDs --- */

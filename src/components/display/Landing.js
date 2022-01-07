@@ -7,6 +7,8 @@ import Details from './Details';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartView from './CartView';
 import OrderForm from './OrderForm';
+import Contact from './Contact';
+import AboutUs from './AboutUs';
 
 function Landing(props) {
 
@@ -28,6 +30,8 @@ function Landing(props) {
                     <Route exact path="/details/:id" element={<Details />} />
                     <Route exact path="/cart" element={<CartView />} />
                     <Route exact path="/newOrder" element={<OrderForm />} />
+                    <Route exact path="/contact" element={<Contact />} />
+                    <Route exact path="/aboutus" element={<AboutUs />} />
 
                 </Routes>
 

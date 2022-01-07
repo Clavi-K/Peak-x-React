@@ -26,7 +26,6 @@ export default function ItemCounter({ Item }) {
     const [sizeS, setSize] = useState(Item.sizes[0]);
     const [input, setInput] = useState('button');
     const { addToCart } = useContext(CartContext);
-    const { cart } = useContext(CartContext);
 
     function plusItem() {
 
