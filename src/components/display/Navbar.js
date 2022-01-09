@@ -38,7 +38,7 @@ function Navbar() {
 
                 <Link to={`/aboutus`}>
                     <li className="nav-item">
-                        <a id="item" className="nav-link menu" href="*">Nosotros</a>
+                        <a id="item" className="nav-link menu" href="/aboutus">Nosotros</a>
                     </li>
                 </Link>
 
@@ -48,7 +48,7 @@ function Navbar() {
 
                 <Link to={`/contact`}>
                     <li className="nav-item">
-                        <a id="item" className="nav-link menu" href="*">Contáctanos</a>
+                        <a id="item" className="nav-link menu" href="/contact">Contáctanos</a>
                     </li>
                 </Link>
 
