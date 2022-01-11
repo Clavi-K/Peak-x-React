@@ -11,6 +11,7 @@ export default function CartContextProvider({ children }) {
     function addToCart(Item, size, amnt) {
 
         let cartBool = false;
+        let cartIndex = undefined;
         let purchase = { item: Item, size: size, amount: amnt }
 
         if (cart.length === 0) {
@@ -24,6 +25,8 @@ export default function CartContextProvider({ children }) {
                 if (purchase.item.id === i.item.id) {
 
                     cartBool = true;
+                    i.amount += purchase.amount;
+                    setCartL(cartL + purchase.amount);
 
                 }
 
