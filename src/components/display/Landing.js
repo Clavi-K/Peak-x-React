@@ -28,7 +28,7 @@ function Landing(props) {
                     <Route exact path="/hoodies" element={<ItemList cat="hoodies" />} />
                     <Route exact path="/snaps" element={<ItemList cat="snaps" />} />
                     <Route exact path="/details/:id" element={<Details />} />
-                    <Route exact path="/cart" element={<CartView />} />
+                    <Route exact path="/cart" element={<CartView key="" />} />
                     <Route exact path="/newOrder" element={<OrderForm />} />
                     <Route exact path="/contact" element={<Contact />} />
                     <Route exact path="/aboutus" element={<AboutUs />} />

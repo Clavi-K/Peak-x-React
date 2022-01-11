@@ -73,24 +73,12 @@ header ul li a {
 
 header ul li p {
     color: black;
-    margin-top: 120%;
     margin-bottom: 0%;
 }
 
-header button img {
-    position: relative;
-    align-items: center;
-    width: 100%;
-}
-
 header button {
-    position: absolute;
-    display: inline;
     background: none;
     border: none;
-    width: 2%;
-    right: 4%;
-    top: 3.2%;
 }
 
 section h1 {
@@ -231,17 +219,30 @@ section h1 {
     text-decoration: none;
 }
 
-.sCart {
-    left: 21vw;
-    top: .4vh;
-    width: 12%;
-}
-
 .navBar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
     position: absolute;
     font-size: 110%;
     bottom: 91vh;
-    right: 0%;
+    right: 2%;
+}
+
+.navBar li {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.navBar li button {
+    position: absolute;
+    right: 50%;
+    width: auto;
+}
+
+.navBar li button img {
+    width: 100%;
 }
 
 .NavTitle {
@@ -452,6 +453,27 @@ section h1 {
 }
 
 /* --- IDs --- */
+
+#cartDisplay li p {
+    position: absolute;
+    left: 145%;
+    bottom: 1%;
+}
+
+#cartDisplay li button {
+    text-align: center;
+    top: -5%;
+    left: 125%;
+    position: absolute;
+    width: 20%;
+    height: 120%;
+}
+
+#cartDisplay li button img {
+    position: relative;
+    top: -13%;
+    left: -2%;
+}
 
 #title {
     display: block;
